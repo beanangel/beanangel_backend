@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+standard:
+  name: train station
+  location:
+    - 50
+    - 8
+  address: Bahnhofsweg 4
+  city: Frankfurt am Main
+  state: Hesse
+
+edge_cases:
+  name: public park
+  location:
+    - 53
+    - 11
+  address: Fürtwängler Weg 9
+  city: Köln
+  state: Rhineland-Palatinate
