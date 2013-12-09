@@ -6,5 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Spot.create(name: "train station", location: [50, 8], address: "Bahnhofsweg 4", city: "Frankfurt am Main", state: "Hesse")
-Spot.create(name: "public park", location: [53, 11], address: "Fürtwängler Weg 9", city: "Köln", state: "Rhineland-Palatinate")
+spots = YAML.load_file('test/fixtures/spots.yml')
+spots.each do |key, values|
+  Spot.create(values)
+end
