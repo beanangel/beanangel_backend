@@ -1,19 +1,82 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 standard:
-  name: train station
+  name: main station
   location:
-    - 50
-    - 8
+    - 8.67
+    - 50.13
   address: Bahnhofsweg 4
   city: Frankfurt am Main
   state: Hesse
 
-edge_cases:
-  name: public park
+lokalbahnhof:
+  name: Lokalbahnhof
   location:
-    - 53
-    - 11
-  address: Fürtwängler Weg 9
+    - 8.690591318318454
+    - 50.10301477640354
+  address: Darmstädter Landstr. 14
+  city: Frankfurt am Main
+  state: Hesse
+
+schirn:
+  name: Schirn Kunsthalle
+  location:
+    - 8.68359465905671
+    - 50.11039270450601
+  address: Am Römerberg
+  city: Frankfurt am Main
+  state: Hesse
+
+kleinmarkthalle:
+  name: Kleinmarkthalle
+  location:
+    - 8.68395209312439
+    - 50.112838539633096
+  address: Hasengasse 5
+  city: Frankfurt am Main
+  state: Hesse
+
+opernplatz:
+  name: Opernplatz
+  location:
+    - 8.671667575836182
+    - 50.115102059908374
+  address: Opernplatz
+  city: Frankfurt am Main
+  state: Hesse
+
+cafe_karin:
+  name: Café Karin
+  location:
+    - 8.678056951403741
+    - 50.11156107003602
+  address: Großer Hirschgraben 28
+  city: Frankfurt am Main
+  state: Hesse
+
+plank:
+  name: Plank
+  location:
+    - 8.668781
+    - 50.107678
+  address: Münchener Str. 30
+  city: Frankfurt am Main
+  state: Hesse
+
+an_der_hauptwache:
+  name: Hauptwache Frankfurt
+  location:
+    - 8.679011246230885
+    - 50.11397428893759
+  address: Münchener Str. 30
+  city: Frankfurt am Main
+  state: Hesse
+
+edge_cases:
+  name: Vorgebirgspark
+  location:
+    - 6.950827
+    - 50.909284
+  address: Fürtwängler Weg 9 (not really)
   city: Köln
   state: Rhineland-Palatinate
