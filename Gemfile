@@ -7,6 +7,7 @@ gem 'rails', '4.0.2'
 gem 'rails-api'
 
 gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid_geospatial'
 
 
 # To use ActiveModel has_secure_password
