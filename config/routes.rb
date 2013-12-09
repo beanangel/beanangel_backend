@@ -1,6 +1,6 @@
 Beanangel::Application.routes.draw do
   root to: "spots#index"
-  get "spots/index"
+  resources :spots, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
