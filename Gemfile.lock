@@ -1,3 +1,20 @@
+GIT
+  remote: git://github.com/mongoid/mongoid.git
+  revision: bbc0df51f9c1fec19dd15e4c5d478d6474adefdc
+  specs:
+    mongoid (4.0.0.alpha1)
+      activemodel (~> 4.0.0)
+      moped (~> 2.0.beta4)
+      origin (~> 1.0)
+      tzinfo (~> 0.3.37)
+
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 2faa571a9cfac95f992449fe0417a1d7774b84fc
+  specs:
+    active_model_serializers (0.9.0.pre)
+      activemodel (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,7 +44,9 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    bson (2.0.0)
     builder (3.1.4)
+    connection_pool (1.2.0)
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.6.9)
@@ -36,8 +55,16 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
+    moped (2.0.0.beta4)
+      bson (~> 2.0)
+      connection_pool (~> 1.2)
+      optionable (~> 0.2.0)
     multi_json (1.8.2)
+    optionable (0.2.0)
+    origin (1.1.0)
     polyglot (0.3.3)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -81,5 +108,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
+  mongoid!
+  puma
   rails (= 4.0.2)
   rails-api
