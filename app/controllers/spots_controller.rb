@@ -9,7 +9,8 @@ class SpotsController < ApplicationController
   private
 
     def allow_cors
-      headers["Access-Control-Allow-Origin"] = "http://localhost:9000"
+      origin = Rails.env.production? ? "http://staging2.united-creative.com:9000" : 'http://localhost:9000'
+      headers["Access-Control-Allow-Origin"] = origin
       headers["Access-Control-Allow-Methods"] = 'GET, POST, PUT, DELETE'
       headers["Access-Control-Allow-Headers"] =
       'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
