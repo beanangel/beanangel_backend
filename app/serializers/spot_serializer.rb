@@ -30,4 +30,11 @@ class SpotSerializer < ActiveModel::Serializer
   def geometry_type
     "Point"
   end
+
+  # @override used to determine what attributes and associations should be included in the output
+  # @return the attribute keys that should be included in the output [Array]
+  def filter(keys)
+    keys.delete(:errors) if object.errors.blank?
+    keys
+  end
 end
