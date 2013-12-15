@@ -16,7 +16,7 @@ class SpotSerializer < ActiveModel::Serializer
   end
 
   def properties
-    {name: object.name, description: object.description}
+    {name: object.title, description: object.description}
   end
 
   # @see http://geojson.org/geojson-spec.html#geometry-objects
