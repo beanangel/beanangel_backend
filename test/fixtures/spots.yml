@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 standard:
-  name: main station
+  title: Main Station
   location:
     - 8.67
     - 50.13
@@ -10,7 +10,7 @@ standard:
   state: Hesse
 
 lokalbahnhof:
-  name: Lokalbahnhof
+  title: Lokalbahnhof
   location:
     - 8.690591318318454
     - 50.10301477640354
@@ -19,7 +19,7 @@ lokalbahnhof:
   state: Hesse
 
 schirn:
-  name: Schirn Kunsthalle
+  title: Schirn Kunsthalle
   location:
     - 8.68359465905671
     - 50.11039270450601
@@ -28,7 +28,7 @@ schirn:
   state: Hesse
 
 kleinmarkthalle:
-  name: Kleinmarkthalle
+  title: Kleinmarkthalle
   location:
     - 8.68395209312439
     - 50.112838539633096
@@ -37,7 +37,7 @@ kleinmarkthalle:
   state: Hesse
 
 opernplatz:
-  name: Opernplatz
+  title: Opernplatz
   location:
     - 8.671667575836182
     - 50.115102059908374
@@ -46,7 +46,7 @@ opernplatz:
   state: Hesse
 
 cafe_karin:
-  name: Café Karin
+  title: Café Karin
   location:
     - 8.678056951403741
     - 50.11156107003602
@@ -55,7 +55,7 @@ cafe_karin:
   state: Hesse
 
 plank:
-  name: Plank
+  title: Plank
   location:
     - 8.668781
     - 50.107678
@@ -64,7 +64,7 @@ plank:
   state: Hesse
 
 an_der_hauptwache:
-  name: Hauptwache Frankfurt
+  title: Hauptwache Frankfurt
   location:
     - 8.679011246230885
     - 50.11397428893759
@@ -73,7 +73,7 @@ an_der_hauptwache:
   state: Hesse
 
 edge_cases:
-  name: Vorgebirgspark
+  title: Vorgebirgspark
   location:
     - 6.950827
     - 50.909284

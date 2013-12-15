@@ -6,7 +6,7 @@ class SpotTest < ActiveSupport::TestCase
     @spots = YAML.load_file('test/fixtures/spots.yml')
   end
 
-  required_fields = [:location]
+  required_fields = [:title, :location, :username]
 
   required_fields.each do |field|
     test "doesn't save without a #{field}" do
