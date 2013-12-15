@@ -24,5 +24,15 @@ module Beanangel
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # allow CORS by using https://github.com/cyu/rack-cors
+    config.middleware.use Rack::Cors do
+      allow do
+        origins 'localhost:9000', 'staging2.united-creative.com'
+        resource %r{/spots(/[\w-]+)?(.json)?},
+                  :headers => ['Origin', 'Accept', 'Content-Type', 'X-Requested-With'],
+                  :methods => [:get, :post, :put]
+      end
+    end
   end
 end
