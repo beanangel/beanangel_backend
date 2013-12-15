@@ -5,6 +5,7 @@ standard:
   location:
     - 8.67
     - 50.13
+  username: aTestUser
   address: Bahnhofsweg 4
   city: Frankfurt am Main
   state: Hesse
@@ -14,6 +15,7 @@ lokalbahnhof:
   location:
     - 8.690591318318454
     - 50.10301477640354
+  username: aTestUser
   address: Darmstädter Landstr. 14
   city: Frankfurt am Main
   state: Hesse
@@ -23,6 +25,7 @@ schirn:
   location:
     - 8.68359465905671
     - 50.11039270450601
+  username: aTestUser
   address: Am Römerberg
   city: Frankfurt am Main
   state: Hesse
@@ -32,6 +35,7 @@ kleinmarkthalle:
   location:
     - 8.68395209312439
     - 50.112838539633096
+  username: aTestUser
   address: Hasengasse 5
   city: Frankfurt am Main
   state: Hesse
@@ -41,6 +45,7 @@ opernplatz:
   location:
     - 8.671667575836182
     - 50.115102059908374
+  username: aTestUser
   address: Opernplatz
   city: Frankfurt am Main
   state: Hesse
@@ -50,6 +55,7 @@ cafe_karin:
   location:
     - 8.678056951403741
     - 50.11156107003602
+  username: aTestUser
   address: Großer Hirschgraben 28
   city: Frankfurt am Main
   state: Hesse
@@ -59,6 +65,7 @@ plank:
   location:
     - 8.668781
     - 50.107678
+  username: someOtherTestUser
   address: Münchener Str. 30
   city: Frankfurt am Main
   state: Hesse
@@ -68,6 +75,7 @@ an_der_hauptwache:
   location:
     - 8.679011246230885
     - 50.11397428893759
+  username: someOtherTestUser
   address: Münchener Str. 30
   city: Frankfurt am Main
   state: Hesse
@@ -77,6 +85,7 @@ edge_cases:
   location:
     - 6.950827
     - 50.909284
+  username: Enriqué Goßlar
   address: Fürtwängler Weg 9 (not really)
   city: Köln
   state: Rhineland-Palatinate
