@@ -4,6 +4,7 @@ class Spot
 
   field :title, type: String
   field :location, type: Point
+  mount_uploader :photo, PhotoUploader
   field :username, type: String
   field :address, type: String
   field :city, type: String

@@ -16,7 +16,12 @@ class SpotSerializer < ActiveModel::Serializer
   end
 
   def properties
-    {title: object.title, username: object.username, description: object.description}
+    {
+      title: object.title,
+      photo: object.photo.as_json[:photo], # don't include the extra wrapper
+      username: object.username,
+      description: object.description
+    }
   end
 
   # @see http://geojson.org/geojson-spec.html#geometry-objects
