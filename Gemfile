@@ -31,3 +31,5 @@ gem 'puma'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "sentry-raven", github: "getsentry/raven-ruby"
