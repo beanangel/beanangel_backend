@@ -11,6 +11,12 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid_geospatial'
 
+# uploader gem
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mini_magick'
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
