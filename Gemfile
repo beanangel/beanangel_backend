@@ -6,7 +6,9 @@ gem 'rails', '4.0.2'
 
 gem 'rails-api'
 
-gem 'rack-cors', :require => 'rack/cors'
+# security
+gem 'rack-cors', require: 'rack/cors'
+gem 'rack-protection', github: 'aCandidMind/rack-protection', require: 'rack/protection'
 
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid_geospatial'

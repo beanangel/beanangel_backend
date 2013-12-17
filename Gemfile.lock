@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/aCandidMind/rack-protection.git
+  revision: 5c7e514a61971392e86a3878bb426d6333fa5ec2
+  specs:
+    rack-protection (1.5.1)
+      rack
+
+GIT
   remote: git://github.com/getsentry/raven-ruby.git
   revision: 3563a6b08bfde1d1b603b40cc092c0a75a2ab032
   specs:
@@ -146,6 +153,7 @@ DEPENDENCIES
   mongoid_geospatial
   puma
   rack-cors
+  rack-protection!
   rails (= 4.0.2)
   rails-api
   sentry-raven!
