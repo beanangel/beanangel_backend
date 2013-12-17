@@ -25,10 +25,21 @@ module Beanangel
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    HOSTS = {
+      frontend: {
+        development: 'localhost:9000',
+        production: 'staging2.united-creative.com'
+      },
+      backend: {
+        development: 'localhost:3000',
+        production: 'staging2.united-creative.com'
+      }
+    }
+
     # allow CORS by using https://github.com/cyu/rack-cors
     config.middleware.use Rack::Cors do
       allow do
-        origins 'localhost:9000', 'staging2.united-creative.com'
+        origins HOSTS[:frontend].values
         resource %r{/spots(/[\w-]+)?(.json)?},
                   :headers => ['Origin', 'Accept', 'Content-Type', 'X-Requested-With'],
                   :methods => [:get, :post, :put]
