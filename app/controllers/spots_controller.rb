@@ -37,8 +37,8 @@ class SpotsController < ApplicationController
     def render_for_iframe_transport
       # Check whether this comes from jquery.iframe-transport
       # Eventually we're only supporting application/json so we except X-HTTP-Accept to be just that
-      if  headers['X-Requested-With'] == 'IFrame' &&
-          headers['X-HTTP-Accept'].starts_with?("application/json")
+      if  params.delete('X-Requested-With') == 'IFrame' &&
+          params.delete('X-HTTP-Accept').starts_with?("application/json")
         render action_name, format: :html
       else
         render nothing: true
