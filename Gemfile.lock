@@ -73,6 +73,7 @@ GEM
     erubis (2.7.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    geocoder (1.1.9)
     hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
@@ -84,10 +85,6 @@ GEM
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (4.7.5)
-    mongoid_geospatial (3.1.0)
-      activemodel (>= 3.2)
-      activesupport (>= 3.2)
-      mongoid (>= 3.0.0)
     moped (2.0.0.beta4)
       bson (~> 2.0)
       connection_pool (~> 1.2)
@@ -148,9 +145,9 @@ DEPENDENCIES
   active_model_serializers!
   carrierwave
   carrierwave-mongoid
+  geocoder
   mini_magick
   mongoid!
-  mongoid_geospatial
   puma
   rack-cors
   rack-protection!

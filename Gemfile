@@ -11,7 +11,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rack-protection', github: 'aCandidMind/rack-protection', require: 'rack/protection'
 
 gem 'mongoid', github: 'mongoid/mongoid'
-gem 'mongoid_geospatial'
+gem 'geocoder'
 
 # uploader gem
 gem 'carrierwave'
