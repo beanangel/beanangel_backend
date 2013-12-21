@@ -40,7 +40,13 @@ class SpotsController < ApplicationController
     end
 
     def spot_params
-      attrs = params[:spot].dup
+      attrs = params[:properties].dup
+
+      # get coordinates if present
+      if params[:geometry] && (coords = params[:geometry][:coordinates]).present?
+        attrs[:location] = coords
+      end
+
       # set the location query to the model's address field as long as we don't have
       # reverse geocoding implemented.
       attrs[:address] = attrs.delete(:location_query)
