@@ -15,7 +15,15 @@ gem 'mongoid_geospatial'
 
 # uploader gem
 gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem "carrierwave-mongoid", "~> 0.6.3"
+
+# Having mongoid 4.x means carrierwave-mongoid's dependency mongoid-grid_fs
+# needs to point to master as it doesn't have a release yet with mongoid 4 support.
+# This gem is a dependency even though we're not using GridFS.
+# For reasons see https://github.com/carrierwaveuploader/carrierwave-mongoid/issues/94
+# This topic is being discussed in further github issues on carrierwave-mongoid: #97, #100 and #115
+# TODO check whether this still applies from time to time
+gem "mongoid-grid_fs", github: "ahoward/mongoid-grid_fs"
 gem 'mini_magick'
 
 
