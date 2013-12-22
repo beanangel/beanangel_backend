@@ -3,7 +3,7 @@
 class SpotSerializer < ActiveModel::Serializer
   attributes :id, :type, :properties, :geometry, :errors
 
-  # Making sure MongoDB ID's aren't supported with $oid but as simple strings instead
+  # Making sure MongoDB ID's aren't serialized with $oid but as simple strings instead
   # @return MongoDB ID [String]
   def id
     object.id.to_s
@@ -15,10 +15,11 @@ class SpotSerializer < ActiveModel::Serializer
     "Feature"
   end
 
+  # @return properties of the spot apart from geometry and type [Hash]
   def properties
     {
       title: object.title,
-      attachments: object.attachments,
+      attachments: serialized_attachments,
       username: object.username,
       description: object.description
     }
@@ -34,6 +35,11 @@ class SpotSerializer < ActiveModel::Serializer
   # @return GeoJSON geometry type "Point" [String]
   def geometry_type
     "Point"
+  end
+
+  # @return attachments run through their specific ActiveModel::Serializer [ActiveModel::ArraySerializer]
+  def serialized_attachments
+    ActiveModel::ArraySerializer.new(object.attachments)
   end
 
   # @override used to determine what attributes and associations should be included in the output
