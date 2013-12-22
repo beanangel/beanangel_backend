@@ -18,7 +18,7 @@ class SpotSerializer < ActiveModel::Serializer
   def properties
     {
       title: object.title,
-      photo: object.photo.as_json[:photo], # don't include the extra wrapper
+      attachments: object.attachments,
       username: object.username,
       description: object.description
     }

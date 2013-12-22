@@ -47,6 +47,11 @@ class SpotsController < ApplicationController
         attrs[:location] = coords
       end
 
+      # build Attachment documents from uploaded files
+      if attrs[:attachments]
+        attrs[:attachments] = attrs[:attachments].map {|a| {file: a} }
+      end
+
       # set the location query to the model's address field as long as we don't have
       # reverse geocoding implemented.
       attrs[:address] = attrs.delete(:location_query)

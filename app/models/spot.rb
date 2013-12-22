@@ -4,14 +4,16 @@ class Spot
 
   field :title, type: String
   field :location, type: Point
-  mount_uploader :photo, PhotoUploader
   field :username, type: String
   field :address, type: String
   field :city, type: String
   field :state, type: String
   field :description, type: String
 
+  embeds_many :attachments, cascade_callbacks: true
+
   validates :title, presence: true
+  validates :attachments, presence: true
   validates :location, presence: true
   validates :username, presence: true
 
