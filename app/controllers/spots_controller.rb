@@ -49,7 +49,12 @@ class SpotsController < ApplicationController
 
       # build Attachment documents from uploaded files
       if attrs[:attachments]
-        attrs[:attachments] = attrs[:attachments].map {|a| {file: a} }
+        attrs[:attachments] = attrs[:attachments].map {|a| Attachment.new(file: a) }
+
+        # this might also be an existing spot with existing attachments
+        if @spot && @spot.attachments.present?
+          attrs[:attachments] = @spot.attachments | attrs[:attachments]
+        end
       end
 
       # set the location query to the model's address field as long as we don't have
