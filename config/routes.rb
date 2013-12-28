@@ -1,5 +1,6 @@
 Beanangel::Application.routes.draw do
   root to: "spots#index"
+  resource :search, only: [:create], controller: :search
   resources :spots, only: [:index, :create, :update] do
     post '/', action: 'update', on: :member
   end

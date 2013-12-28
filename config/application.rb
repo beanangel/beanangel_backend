@@ -52,6 +52,9 @@ module Beanangel
         resource %r{/spots(/[\w-]+)?(.json)?},
                   :headers => ['Origin', 'Accept', 'Content-Type', 'X-Requested-With'],
                   :methods => [:get, :post, :put]
+        resource '/search',
+                 :headers => ['Origin', 'Accept', 'Content-Type'],
+                 :methods => [:post]
       end
     end
   end
