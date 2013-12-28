@@ -12,11 +12,7 @@ class Search
 
     results = Geocoder.search(query)
     results.each do |result|
-      attrs = SearchResult.result_fields.inject({}) do |hash, key|
-                hash[key] = result.send(key)
-                hash
-              end
-      self.results << SearchResult.new(attrs)
+      self.results << SearchResult.build_from_geocoder(result)
     end
     save!
   end

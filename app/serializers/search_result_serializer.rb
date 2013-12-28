@@ -1,5 +1,5 @@
 class SearchResultSerializer < BaseSerializer
-  attributes :id, :latitude, :longitude, :address, :city, :province, :state, :postal_code, :country, :country_code
+  attributes :id, :latitude, :longitude, :bounds, :address, :city, :province, :state, :postal_code, :country, :country_code
 
   # Geocoder::Results::Ovi#state returns address_data['County']
   # which isn't true for Germany for example. So instead we're returning
