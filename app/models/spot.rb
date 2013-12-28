@@ -4,17 +4,20 @@ class Spot
 
   field :title, type: String
   field :location, type: Array
-  mount_uploader :photo, PhotoUploader
   field :username, type: String
   field :address, type: String
   field :city, type: String
   field :state, type: String
   field :description, type: String
 
+  embeds_many :attachments, cascade_callbacks: true
+  
   geocoded_by :address, :coordinates => :location
   after_validation :geocode, if: ->(obj){ obj.address.present? && obj.address_changed? }
 
+
   validates :title, presence: true
+  validates :attachments, presence: true
   validates :location, presence: true
   validates :username, presence: true
 end

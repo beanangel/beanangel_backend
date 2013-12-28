@@ -40,7 +40,23 @@ class SpotsController < ApplicationController
     end
 
     def spot_params
-      attrs = params[:spot].dup
+      attrs = params[:properties].dup
+
+      # get coordinates if present
+      if params[:geometry] && (coords = params[:geometry][:coordinates]).present?
+        attrs[:location] = coords
+      end
+
+      # build Attachment documents from uploaded files
+      if attrs[:attachments]
+        attrs[:attachments] = attrs[:attachments].map {|a| Attachment.new(file: a) }
+
+        # this might also be an existing spot with existing attachments
+        if @spot && @spot.attachments.present?
+          attrs[:attachments] = @spot.attachments | attrs[:attachments]
+        end
+      end
+
       # set the location query to the model's address field as long as we don't have
       # reverse geocoding implemented.
       attrs[:address] = attrs.delete(:location_query)

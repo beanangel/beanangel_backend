@@ -1,5 +1,6 @@
 Beanangel::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.asset_host = get_host_for(:backend, :development)
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

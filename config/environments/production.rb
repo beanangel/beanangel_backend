@@ -1,5 +1,6 @@
 Beanangel::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.asset_host = get_host_for(:backend, :production)
 
   # Code is not reloaded between requests.
   config.cache_classes = true

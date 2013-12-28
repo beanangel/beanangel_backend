@@ -8,5 +8,6 @@
 
 spots = YAML.load_file('test/fixtures/spots.yml')
 spots.each do |key, values|
-  Spot.create(values)
+  attachments = [{file: File.open(Rails.root.join("test/assets/P8080027.JPG"))}]
+  Spot.create(values.merge(attachments: attachments))
 end

@@ -36,6 +36,15 @@ module Beanangel
       }
     }
 
+    def get_host_for(system, rails_env)
+      host = HOSTS[system].try(:[], rails_env)
+      if host
+        # get a protocol-relative URL
+        # http://www.paulirish.com/2010/the-protocol-relative-url/
+        "//#{host}"
+      end
+    end
+
     # allow CORS by using https://github.com/cyu/rack-cors
     config.middleware.use Rack::Cors do
       allow do
