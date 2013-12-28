@@ -1,13 +1,7 @@
 # Serializing spots compliant to the GeoJSON standard
 # @see http://geojson.org/geojson-spec.html
-class SpotSerializer < ActiveModel::Serializer
+class SpotSerializer < BaseSerializer
   attributes :id, :type, :properties, :geometry, :errors
-
-  # Making sure MongoDB ID's aren't serialized with $oid but as simple strings instead
-  # @return MongoDB ID [String]
-  def id
-    object.id.to_s
-  end
 
   # @see http://geojson.org/geojson-spec.html#feature-objects
   # @return the GeoJSON object type "Feature" [String]

@@ -1,11 +1,5 @@
-class AttachmentSerializer < ActiveModel::Serializer
+class AttachmentSerializer < BaseSerializer
   attributes :id, :file, :thumb, :content_type
-
-  # Making sure MongoDB ID's aren't serialized  with $oid but as simple strings instead
-  # @return MongoDB ID [String]
-  def id
-    object.id.to_s
-  end
 
   def file
     object.file.url
