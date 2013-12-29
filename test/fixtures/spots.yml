@@ -3,8 +3,8 @@
 standard:
   title: Main Station
   location:
-    - 8.67
-    - 50.13
+    - 8.636564
+    - 50.121212
   username: aTestUser
   address: Bahnhofsweg 4
   city: Frankfurt am Main
